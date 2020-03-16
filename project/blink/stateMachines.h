@@ -1,6 +1,10 @@
-#ifdef stateMachine_included
+#ifndef stateMachine_included
 #define stateMachine_included
 
-void state_advance();
+char state_zero();
+char state_one();
+char state_two();
+char state_three();
+void state_loop();
 
-#endif //included
+#endif // included
