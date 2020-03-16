@@ -1,6 +1,7 @@
 #include <msp430.h>
 #include "stateMachines.h"
 #include "led.h"
+#include "buzzer.h"
 
 /* LED RED/GREEN toggle section */
 
@@ -49,6 +50,7 @@ char state_zero()
   if(!checkR || !checkG) {
     return 0;
   } else {
+    buzzer_set_period(0);
     return 1;
   }
 }
@@ -67,6 +69,7 @@ char state_one()
   if(!checkR || !checkG) {
     return 0;
   } else {
+    buzzer_set_period(1000);
     return 1;
   }
 }
@@ -85,6 +88,7 @@ char state_two()
   if(!checkR || !checkG) {
     return 0;
   } else {
+    buzzer_set_period(1500);
     return 1;
   }
 }
@@ -103,6 +107,7 @@ char state_three()
   if(!checkR || !checkG) {
     return 0;
   } else {
+    buzzer_set_period(2000);
     return 1;
   }
 }
