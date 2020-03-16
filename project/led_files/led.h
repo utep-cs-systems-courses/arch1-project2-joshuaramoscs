@@ -8,7 +8,10 @@
 extern unsigned char red_on, green_on;
 extern unsigned char led_changed;
 
+/* Initializes the LEDs */
 void led_init();
+
+/* Updates the LEDs according to the selections */
 void led_update();
 
 #endif // included

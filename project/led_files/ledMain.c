@@ -1,4 +1,4 @@
-//Cycle binary values 0 to 3 with LEDs
+/* Cycle binary values 0 to 3 with LEDs */
 #include <msp430.h>
 #include "libTimer.h"
 #include "led.h"

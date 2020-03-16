@@ -92,7 +92,7 @@ char state_three() /* Display binary 3 */
     checkR = toggle_red();
   }
   if(!green_on) {
-    checkG = _green();
+    checkG = toggle_green();
   }
   if(!checkR || !checkG) {
     return 0;
