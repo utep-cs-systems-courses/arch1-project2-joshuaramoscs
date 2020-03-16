@@ -4,7 +4,8 @@
 
 /* LED RED/GREEN toggle section */
 
-char toggle_red()            /* Toggles red led ON if OFF, or OFF if ON. */
+/* Toggles red led ON if OFF, or OFF if ON. */
+char toggle_red()
 {
   char changed = 0;
   if(red_on) {
@@ -17,7 +18,8 @@ char toggle_red()            /* Toggles red led ON if OFF, or OFF if ON. */
   return changed;            /* char changed checks if toggle was successful */
 }
 
-char toggle_green()          /* Toggles red led ON if OFF, or OFF if ON. */
+/* Toggles red led ON if OFF, or OFF if ON. */
+char toggle_green()
 {
   char changed = 0;
   if(green_on) {
@@ -33,7 +35,8 @@ char toggle_green()          /* Toggles red led ON if OFF, or OFF if ON. */
 
 /* State Machine section */
 
-char state_zero() /* Display binary 0 */
+/* Display binary 0 */
+char state_zero()
 {
   char checkR = 1;
   char checkG = 1;
@@ -50,7 +53,8 @@ char state_zero() /* Display binary 0 */
   }
 }
 
-char state_one() /* Display binary 1 */
+/* Display binary 1 */
+char state_one()
 {
   char checkR = 1;
   char checkG = 1;
@@ -67,7 +71,8 @@ char state_one() /* Display binary 1 */
   }
 }
 
-char state_two() /* Display binary 2 */
+/* Display binary 2 */
+char state_two()
 {
   char checkR = 1;
   char checkG = 1;
@@ -84,7 +89,8 @@ char state_two() /* Display binary 2 */
   }
 }
 
-char state_three() /* Display binary 3 */
+/* Display binary 3 */
+char state_three()
 {
   char checkR = 1;
   char checkG = 1;
@@ -101,7 +107,8 @@ char state_three() /* Display binary 3 */
   }
 }
 
-void state_loop() /* Loop through state 0 to 3 */
+/* Loop through state 0 to 3 */
+void state_loop()
 {
   char changed = 0;
   

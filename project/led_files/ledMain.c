@@ -3,6 +3,7 @@
 #include "libTimer.h"
 #include "led.h"
 
+/* Configures the clock, initializes LEDs, and enables interrupts. */
 int main(void) {
   configureClocks();		/* setup master oscillator, CPU & peripheral clocks */
   led_init();

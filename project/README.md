@@ -1,9 +1,9 @@
 ## Description
-This directory contains demo programs that demonstrate basic I/O using timer and button interrupts.
+This directory contains my programs that demonstrate basic I/O using timer and button interrupts.
 
 Program | Description
 ------- | -----------
-Blink   | Uses timer interrupts to flash the LEDs in a silly pattern.
+led     | Uses timer interrupts to flash the LEDs to display 0 to 3 in binary.
 Button  | Uses interrupts to detect when a switch is pressed or released.
 Buzzer  | Emits a single continuous note from the buzzer.
 Dim     | Uses Pulse Width Modulation (PWN) to illuminate an LED dimly.
