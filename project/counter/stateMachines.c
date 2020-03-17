@@ -50,6 +50,7 @@ char state_zero()
   if(!checkR || !checkG) {
     return 0;
   } else {
+    led_update();
     buzzer_set_period(0);
     return 1;
   }
@@ -69,6 +70,7 @@ char state_one()
   if(!checkR || !checkG) {
     return 0;
   } else {
+    led_update();
     buzzer_set_period(1000);
     return 1;
   }
@@ -88,6 +90,7 @@ char state_two()
   if(!checkR || !checkG) {
     return 0;
   } else {
+    led_update();
     buzzer_set_period(1500);
     return 1;
   }
@@ -107,6 +110,7 @@ char state_three()
   if(!checkR || !checkG) {
     return 0;
   } else {
+    led_update();
     buzzer_set_period(2000);
     return 1;
   }
@@ -128,28 +132,24 @@ void state_loop()
     if(!checkZero) {changed = 0;}
     else {changed = 1;}
     led_changed = changed;
-    led_update();
     state = 1; break;
   case 1:
     checkOne = state_one();
     if(!checkOne) {changed = 0;}
     else {changed = 1;}
     led_changed = changed;
-    led_update();
     state = 2; break;
   case 2:
     checkTwo = state_two();
     if(!checkTwo) {changed = 0;}
     else {changed = 1;}
     led_changed = changed;
-    led_update();
     state = 3; break;
   case 3:
     checkThree = state_three();
     if(!checkThree) {changed = 0;}
     else {changed = 1;}
     led_changed = changed;
-    led_update();
     state = 0; break;
   }
 }
