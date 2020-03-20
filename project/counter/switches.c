@@ -4,8 +4,8 @@
 
 char switch_state_down, switch_state_changed; /* effectively boolean */
 
-static char 
-switch_update_interrupt_sense()
+/* Check for interrupt */
+static char switch_update_interrupt_sense()
 {
   char p2val = P2IN;
   /* update switch interrupt to detect changes from current buttons */
@@ -14,8 +14,8 @@ switch_update_interrupt_sense()
   return p2val;
 }
 
-void 
-switch_init()			/* setup switch */
+/* Initialize buttons */
+void switch_init()			/* setup switch */
 {  
   P2REN |= SWITCHES;		/* enables resistors for switches */
   P2IE = SWITCHES;		/* enable interrupts from switches */
@@ -25,8 +25,8 @@ switch_init()			/* setup switch */
   state_zero();
 }
 
-void
-switch_interrupt_handler()
+/* Idle for an interruption */
+void switch_interrupt_handler()
 {
   char p2val = switch_update_interrupt_sense();
   switch_state_changed = 1;

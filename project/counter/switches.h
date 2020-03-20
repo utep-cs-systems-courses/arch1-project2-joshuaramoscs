@@ -7,7 +7,10 @@
 #define SW4 BIT3                /* switch1 is p2.3 */
 #define SWITCHES (SW1 | SW2 | SW3 | SW4)
 
+/* Initialize the buttons */
 void switch_init();
+
+/* Idle for an interruption */
 void switch_interrupt_handler();
 
 extern char switch_state_changed; /* effectively boolean */

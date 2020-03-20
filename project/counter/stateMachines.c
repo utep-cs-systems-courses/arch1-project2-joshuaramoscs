@@ -36,7 +36,7 @@ char toggle_green()
 
 /* State Machine section */
 
-/* Display binary 0 */
+/* Display binary 0 and buzz tone */
 char state_zero()
 {
   char checkR = 1;
@@ -56,7 +56,7 @@ char state_zero()
   }
 }
 
-/* Display binary 1 */
+/* Display binary 1 and buzz lower tone */
 char state_one()
 {
   char checkR = 1;
@@ -76,7 +76,7 @@ char state_one()
   }
 }
 
-/* Display binary 2 */
+/* Display binary 2 and buzz lower tone */
 char state_two()
 {
   char checkR = 1;
@@ -96,7 +96,7 @@ char state_two()
   }
 }
 
-/* Display binary 3 */
+/* Display binary 3 and buzz lower tone */
 char state_three()
 {
   char checkR = 1;
