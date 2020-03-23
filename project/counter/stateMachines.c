@@ -1,12 +1,13 @@
 #include <msp430.h>
 #include "stateMachines.h"
 #include "led.h"
+#include "led_toggle.h"
 #include "buzzer.h"
 
-/* LED RED/GREEN toggle section */
+/* COMMENTED SECTION GOT MOVED TO led_toggle.s */
 
-/* Toggles red led ON if OFF, or OFF if ON. */
-char toggle_red()
+/*
+char toggle_red()            //Toggles green led ON if OFF, or OFF if ON. 
 {
   char changed = 0;
   if(red_on) {
@@ -16,11 +17,10 @@ char toggle_red()
     red_on = 1;
     changed = 1;
   }
-  return changed;            /* char changed checks if toggle was successful */
+  return changed;            // char changed checks if toggle was successful
 }
 
-/* Toggles red led ON if OFF, or OFF if ON. */
-char toggle_green()
+char toggle_green()          //Toggles green led ON if OFF, or OFF if ON. 
 {
   char changed = 0;
   if(green_on) {
@@ -30,8 +30,9 @@ char toggle_green()
     green_on = 1;
     changed = 1;
   }
-  return changed;            /* char changed checks if toggle was successful */
+  return changed;            // char changed checks if toggle was successful
 }
+*/
 
 
 /* State Machine section */
