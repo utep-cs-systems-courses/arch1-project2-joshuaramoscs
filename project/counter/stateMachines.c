@@ -1,5 +1,5 @@
 #include <msp430.h>
-#include "stateMachines.h"
+#include "states.h"
 #include "led.h"
 #include "led_toggle.h"
 #include "buzzer.h"
@@ -26,3 +26,5 @@ void state_loop()
     if(!state_three()) {led_changed = 0;}
     else {led_changed = 1;}
     state = 0; break;
+  }
+}
