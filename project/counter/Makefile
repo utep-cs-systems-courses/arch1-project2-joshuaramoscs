@@ -11,7 +11,7 @@ AS              = msp430-elf-as
 all: counter.elf 
 
 #additional rules for files
-counter.elf: ${COMMON_OBJECTS} led.o buzzer.o switches.o counterMain.o led_toggle.o stateMachines.o wdInterruptHandler.o p2_interrupt_handler.c ../lib/libTimer.a
+counter.elf: ${COMMON_OBJECTS} led.o buzzer.o switches.o counterMain.o led_toggle.o states.o stateMachines.o wdInterruptHandler.o p2_interrupt_handler.c ../lib/libTimer.a
 	${CC} ${CFLAGS} ${LDFLAGS} -o $@ $^
 
 load: counter.elf
@@ -22,13 +22,17 @@ clean:
 
 led.o: led.h
 
+led_toggle.o: led.h led_toggle.h
+
 buzzzer.o: buzzer.h
 
-switches.o: switches.h stateMachines.h
+switches.o: switches.h states.h stateMachines.h
 
-counterMain.o: led.h buzzer.h switches.o
+counterMain.o: led.h buzzer.h switches.h
 
-stateMachines.o: led.h buzzer.h led_toggle.h stateMachines.h
+states.o: led.h buzzer.h led_toggle.h states.h
+
+stateMachines.o: led.h states.h stateMachines.h
 
 wdInterruptHandler.o: switches.h wdInterruptHandler.c
 

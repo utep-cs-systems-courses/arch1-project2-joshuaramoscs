@@ -37,12 +37,14 @@ found in stateMachines.c */
  * toggle_red();	/* Toggles red led ON if Off, or OFF if ON
  * toggle_green();	/* Toggles green led ON if Off, or OFF if ON
 
-### stateMachines.h
+### states.h
 
  * char state_zero();  /* Display binary 0 and buzz tone */
  * char state_one();   /* Displays binary 1 and buzz lower tone */
  * char state_two();   /* Displays binary 2 and buzz lower tone */
  * char state_three(); /* Displays binary 3 and buzz lower tone */
+
+### stateMachines.h
  * char state_loop();  /* Loop through state 0 to 3 */
 
 ### wdInterruptHandler.c
